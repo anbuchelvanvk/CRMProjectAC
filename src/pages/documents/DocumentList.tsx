@@ -54,6 +54,23 @@ export default function DocumentList() {
     };
   }, []);
 
+  const handleDownload = async (name: string, file_url: string) => {
+    try {
+      if (!file_url) throw new Error('No file URL available');
+      
+      const { data, error } = await supabase.storage
+        .from('documents')
+        .createSignedUrl(file_url, 60); // 60 seconds expiry
+
+      if (error) throw error;
+      if (data) {
+        window.open(data.signedUrl, '_blank');
+      }
+    } catch (error: any) {
+      toast.error(error.message || 'Failed to generate download link');
+    }
+  };
+
   return (
     <div>
       <div className="flex justify-between items-center mb-6">

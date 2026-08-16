@@ -11,6 +11,9 @@ interface Client {
   name: string;
   type: string;
   mobile: string;
+  email?: string;
+  address?: string;
+  gstin?: string;
   pan: string;
   status: string;
   created_at: string;
