@@ -54,7 +54,7 @@ export default function DocumentList() {
     };
   }, []);
 
-  const handleDownload = async (name: string, file_url: string) => {
+  const handleDownload = async (_name: string, file_url: string) => {
     try {
       if (!file_url) throw new Error('No file URL available');
       
