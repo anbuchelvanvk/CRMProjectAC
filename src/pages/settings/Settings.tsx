@@ -64,6 +64,36 @@ export default function Settings() {
                   <label className="form-label">Role</label>
                   <input type="text" className="form-input" value="Administrator" disabled />
                 </div>
+                
+                <div className="col-span-2 mt-4 pt-4 border-t border-[var(--border-color)]">
+                  <h4 className="text-sm font-semibold mb-3">Account Security</h4>
+                  <div className="grid grid-cols-2 gap-6">
+                    <div className="form-group">
+                      <label className="form-label">Security Question</label>
+                      <select 
+                        className="form-select"
+                        value={localStorage.getItem('sec_q') || ''}
+                        onChange={(e) => localStorage.setItem('sec_q', e.target.value)}
+                      >
+                        <option value="">Select a question...</option>
+                        <option value="What was your childhood nickname?">What was your childhood nickname?</option>
+                        <option value="In what city did your parents meet?">In what city did your parents meet?</option>
+                        <option value="What is the name of your favorite pet?">What is the name of your favorite pet?</option>
+                        <option value="What high school did you attend?">What high school did you attend?</option>
+                      </select>
+                    </div>
+                    <div className="form-group">
+                      <label className="form-label">Security Answer</label>
+                      <input 
+                        type="password" 
+                        className="form-input" 
+                        placeholder="Enter your answer"
+                        value={localStorage.getItem('sec_a') || ''}
+                        onChange={(e) => localStorage.setItem('sec_a', e.target.value)}
+                      />
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           )}

@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { supabase } from '../lib/supabase';
 import { Briefcase, Mail, Lock, Loader2 } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export default function Login() {
   const [email, setEmail] = useState('');
@@ -25,7 +26,7 @@ export default function Login() {
   };
 
   return (
-    <div className="flex justify-center items-center h-full w-full bg-main">
+    <div className="flex justify-center items-center min-h-screen w-screen" style={{ backgroundColor: 'var(--bg-main)' }}>
       <div className="card w-full max-w-md p-8 animate-fade-in mx-4">
         <div className="flex flex-col items-center mb-8 text-center">
           <div className="sidebar-logo-icon mb-4" style={{ width: 48, height: 48, borderRadius: 'var(--radius-lg)' }}>
@@ -75,7 +76,7 @@ export default function Login() {
           </div>
 
           <div className="flex justify-end mb-4">
-            <button type="button" className="text-sm text-primary font-medium hover:underline">Forgot password?</button>
+            <Link to="/forgot-password" className="text-sm text-primary font-medium hover:underline">Forgot password?</Link>
           </div>
 
           <button type="submit" className="btn btn-primary w-full py-3 h-12" disabled={loading}>

@@ -14,6 +14,7 @@ import FeeList from './pages/fees/FeeList';
 import FeeForm from './pages/fees/FeeForm';
 import ComplianceCalendar from './pages/compliance/ComplianceCalendar';
 import Login from './pages/Login';
+import ForgotPassword from './pages/ForgotPassword';
 import Comms from './pages/comms/Comms';
 import Settings from './pages/settings/Settings';
 import { AuthProvider, useAuth } from './contexts/AuthContext';
@@ -47,6 +48,7 @@ function AppRoutes() {
   return (
     <Routes>
       <Route path="/login" element={<PublicRoute><Login /></PublicRoute>} />
+      <Route path="/forgot-password" element={<PublicRoute><ForgotPassword /></PublicRoute>} />
       
       <Route path="/" element={<ProtectedRoute><MainLayout /></ProtectedRoute>}>
         <Route index element={<Navigate to="/dashboard" replace />} />
