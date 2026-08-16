@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { supabase } from '../lib/supabase';
 import { Briefcase, Mail, ShieldAlert, CheckCircle, Loader2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import toast from 'react-hot-toast';
 
 export default function ForgotPassword() {
   const [step, setStep] = useState(1);
