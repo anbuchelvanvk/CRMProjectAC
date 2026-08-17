@@ -17,6 +17,12 @@ import Login from './pages/Login';
 import ForgotPassword from './pages/ForgotPassword';
 import Comms from './pages/comms/Comms';
 import Settings from './pages/settings/Settings';
+import Employees from './pages/employees/Employees';
+import EmployeeDetails from './pages/employees/EmployeeDetails';
+import AttendancePage from './pages/employees/Attendance';
+import PermissionsPage from './pages/employees/Permissions';
+import LeavesPage from './pages/employees/Leaves';
+import SalaryPage from './pages/employees/Salary';
 import { AuthProvider, useAuth } from './contexts/AuthContext';
 
 // Component to protect routes that require authentication
@@ -66,6 +72,13 @@ function AppRoutes() {
         <Route path="fees/new" element={<FeeForm />} />
         <Route path="compliance" element={<ComplianceCalendar />} />
         <Route path="comms" element={<Comms />} />
+        <Route path="employees" element={<Employees />} />
+        <Route path="employees/new" element={<EmployeeDetails />} />
+        <Route path="employees/:id" element={<EmployeeDetails />} />
+        <Route path="attendance" element={<AttendancePage />} />
+        <Route path="permissions" element={<PermissionsPage />} />
+        <Route path="leaves" element={<LeavesPage />} />
+        <Route path="salary" element={<SalaryPage />} />
         <Route path="settings" element={<Settings />} />
       </Route>
     </Routes>

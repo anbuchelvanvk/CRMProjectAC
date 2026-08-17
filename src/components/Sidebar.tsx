@@ -8,7 +8,11 @@ import {
   CheckSquare, 
   MessageCircle, 
   Calendar, 
-  Settings 
+  Settings,
+  UserCheck,
+  Clock,
+  Banknote,
+  ShieldCheck
 } from 'lucide-react';
 
 const NAV_ITEMS = [
@@ -20,6 +24,11 @@ const NAV_ITEMS = [
   { name: 'Fees', path: '/fees', icon: IndianRupee },
   { name: 'Communications', path: '/comms', icon: MessageCircle },
   { name: 'Compliance Calendar', path: '/compliance', icon: Calendar },
+  { name: 'Team Directory', path: '/employees', icon: UserCheck },
+  { name: 'Attendance', path: '/attendance', icon: Clock },
+  { name: 'Permissions', path: '/permissions', icon: ShieldCheck },
+  { name: 'Leaves', path: '/leaves', icon: Calendar },
+  { name: 'Salary', path: '/salary', icon: Banknote },
   { name: 'Settings', path: '/settings', icon: Settings },
 ];
 

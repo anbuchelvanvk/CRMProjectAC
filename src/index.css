@@ -140,6 +140,12 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .w-full { width: 100%; }
 .h-full { height: 100%; }
 
+/* Added from EmployeeManagement */
+.flex-center { display: flex; align-items: center; justify-content: center; }
+.flex-between { display: flex; align-items: center; justify-content: space-between; }
+.avatar-text { width: 40px; height: 40px; border-radius: 50%; background: var(--primary-light); color: var(--primary); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.1rem; }
+.text-gradient { background: linear-gradient(135deg, var(--primary), #a855f7); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+
 /* Margin and Padding */
 .p-2 { padding: 0.5rem; }
 .p-3 { padding: 0.75rem; }
@@ -171,6 +177,19 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
 .card:hover {
   box-shadow: var(--shadow-lg);
+  border-color: var(--primary-light);
+}
+
+.glass-card {
+  background-color: var(--bg-card);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-color);
+  padding: 1.5rem;
+  transition: box-shadow var(--transition-normal), border-color var(--transition-normal);
+}
+.glass-card:hover {
+  box-shadow: var(--shadow-md);
   border-color: var(--primary-light);
 }
 
