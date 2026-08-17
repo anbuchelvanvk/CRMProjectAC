@@ -1,5 +1,5 @@
 import { supabase } from '../../lib/supabase';
-import { v4 as uuidv4 } from 'uuid'; // need to generate uuid? maybe not, supabase does it
+
 
 export const customFetch = async (input: RequestInfo | URL, init?: RequestInit): Promise<Response> => {
   const urlStr = typeof input === 'string' ? input : input.toString();
