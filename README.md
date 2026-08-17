@@ -1,6 +1,6 @@
-# React + TypeScript + Vite
+# CRM Project with Employee Management
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+This project integrates a full CRM system with an advanced Employee Management/HR Module directly powered by Supabase.
 
 Currently, two official plugins are available:
 
